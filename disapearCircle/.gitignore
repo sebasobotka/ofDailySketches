@@ -1,0 +1,60 @@
+# Compiled Object files
+obj/
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#Windows
+# Windows image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
+*.lnk
+*.zip
+
+#Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.db
+ipch/
+
+bin/*
+!bin/data/
+archiwum/
+
+# Some general ignore patterns
+build/
+*.mode*
+*.app/
+*.pyc
+.svn/
+.vs/
+
+
+
+
