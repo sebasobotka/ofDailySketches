@@ -2,7 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-	
 	//ofSetVerticalSync(true);
 
 	setupGui();
@@ -12,10 +11,15 @@ void ofApp::setup() {
 	ofSetCircleResolution(200);
 	
 	// for recording
-	recordFbo.allocate(appWidth, appHeight, GL_RGB);
+	recordFbo.allocate(appWidth, appHeight, GL_RGB, 16);
 	recordFbo.begin();
 	ofClear(0, 0, 0, 255);
 	recordFbo.end();
+
+	//ofSetBackgroundAuto(false);
+	//ofBackground(0);
+
+	ofEnableAntiAliasing();
 }
 
 //--------------------------------------------------------------
@@ -24,18 +28,15 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-	ofBackground(bckgroundColor);
-	
-	recordFbo.begin();
-		//ofClear(0, 0, 0, 255);
-		ofClear(bckgroundColor);
 
+
+	recordFbo.begin();
+		ofClear(bckgroundColor);
 		ofPushMatrix();
 		ofTranslate(appWidth / 2, appHeight);
 		ofSetLineWidth(lineWidth);
 		drawBranch(lineLen);
 		ofPopMatrix();
-
 	recordFbo.end();
 	
 	recordFbo.draw(0, 0);
