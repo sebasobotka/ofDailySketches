@@ -17,11 +17,6 @@ class ofApp : public ofBaseApp {
 
 
 private:
-		ofxMyCircle circle1;
-		ofxMyCircle circle2;
-		ofxMyCircle circle3;
 		ofxMyCircle bigCircle;
-
 		std::vector<shared_ptr<ofxMyCircle>> circles;
-		
 };
